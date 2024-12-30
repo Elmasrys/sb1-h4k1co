@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #72f68e;
+    --color-secondary: #f4f4f4;
+    --color-accent: #040707;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#040707] text-white;
+  }
+}
+
+@layer components {
+  .nova-message {
+    @apply space-y-4;
+  }
+  
+  .nova-message h2 {
+    @apply text-lg font-bold text-[#72f68e] mb-2;
+  }
+  
+  .nova-message p {
+    @apply mb-3;
+  }
+  
+  .nova-message ul {
+    @apply space-y-2 mb-4;
+  }
+  
+  .nova-message li {
+    @apply flex items-start;
+  }
+  
+  .nova-message li:before {
+    @apply text-[#72f68e] mr-2;
+    content: "•";
+  }
+  
+  .nova-message strong {
+    @apply text-[#72f68e] font-semibold;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer utilities {
+  .bg-brand-primary {
+    background-color: var(--color-primary);
+  }
+  
+  .bg-brand-secondary {
+    background-color: var(--color-secondary);
+  }
+  
+  .bg-brand-accent {
+    background-color: var(--color-accent);
+  }
+
+  .text-brand-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-brand-secondary {
+    color: var(--color-secondary);
+  }
+  
+  .text-brand-accent {
+    color: var(--color-accent);
+  }
+
+  .border-brand-primary {
+    border-color: var(--color-primary);
+  }
+  
+  .border-brand-secondary {
+    border-color: var(--color-secondary);
+  }
+  
+  .border-brand-accent {
+    border-color: var(--color-accent);
+  }
+
+  .ring-brand-primary {
+    --tw-ring-color: var(--color-primary);
+  }
+  
+  .ring-brand-secondary {
+    --tw-ring-color: var(--color-secondary);
+  }
+  
+  .ring-brand-accent {
+    --tw-ring-color: var(--color-accent);
+  }
+
+  .hover\:bg-brand-primary:hover {
+    background-color: var(--color-primary);
+  }
+  
+  .hover\:bg-brand-secondary:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  .hover\:bg-brand-accent:hover {
+    background-color: var(--color-accent);
+  }
+
+  .hover\:text-brand-primary:hover {
+    color: var(--color-primary);
+  }
+  
+  .hover\:text-brand-secondary:hover {
+    color: var(--color-secondary);
+  }
+  
+  .hover\:text-brand-accent:hover {
+    color: var(--color-accent);
+  }
+
+  .bg-brand-primary-10 {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+  
+  .bg-brand-primary-20 {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+  
+  .bg-brand-primary-30 {
+    background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+
+  .hover\:bg-brand-primary-10:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  }
+  
+  .hover\:bg-brand-primary-20:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+  
+  .hover\:bg-brand-primary-30:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  }
+}
